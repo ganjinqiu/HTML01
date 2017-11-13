@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>家居医生02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            width: 100%;
+            height: 60px;
+            background-color: #18bebe;
+        }
+
+        .header > .logo {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            padding-top: 5px;
+        }
+
+        .title {
+            height: 40px;
+            background-color: #efefef;
+            text-align: center;
+        }
+
+        .title_box {
+            width: 1000px;
+            line-height: 40px;
+            background-color: antiquewhite;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .title_box > .title_shouye {
+            line-height: 40px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        .shenzhen {
+            float: left;
+            padding-right: 10px;
+        }
+
+        .location {
+            margin-right: 10px;
+            margin-left: 10px;
+            line-height: 40px;
+
+        }
+
+        .title_box1 {
+            float: right;
+            margin-right: 10px;
+
+        }
+
+        .adm {
+            /*float: left;*/
+        }
+
+        .content {
+            width: 1000px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content_heading {
+            line-height: 40px;
+            font-size: 18px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .content_leibie {
+            background-color: #ebebeb;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .item {
+            margin-bottom: 5px;
+        }
+
+        .item > li {
+            float: left;
+            padding: 3px 5px;
+            border: 1px solid transparent;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+
+        .item > li:nth-child(3), .item > li:hover {
+            background-color: white;
+            border-color: orange;
+        }
+
+        .search {
+            box-sizing: border-box;
+            width: 1000px;
+            background-color: #efefef;
+            margin-top: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 65px;
+            text-align: center;
+        }
+
+        .time {
+            display: inline-block;
+            width: 250px;
+            float: left;
+
+        }
+
+        .wenhao {
+            float: right;
+            text-align: center;
+        }
+
+        .sousou {
+            display: inline-block;
+            background-color: white;
+            height: 20px;
+            width: 250px;
+            line-height: 0;
+            text-align: left;
+
+        }
+
+        .sousou > input, .sousou > button {
+            border: none;
+            outline: none;
+            height: 15px;
+            background-color: white;
+
+        }
+
+        .sousou > input {
+            width: 190px;
+        }
+
+        .cnt {
+            margin-top: 20px;
+        }
+
+        .cnt_box:not(:nth-child(4n)) {
+            margin-right: 13.33px;
+        }
+
+        .cnt_box:first-child, .cnt_box:first-child > h4 {
+            color: orange;
+        }
+
+        .cnt_box {
+            float: left;
+            width: 240px;
+            height: 350px;
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: #ebebeb;
+            margin-bottom: 15px;
+        }
+
+        .cnt_box > img {
+            width: 210px;
+            margin-bottom: 10px;
+
+        }
+
+        .cnt_box > h4 {
+            line-height: 2.4em;
+            color: #18bebe;
+        }
+
+        .cnt_box > h4 > span {
+            font-size: 14px;
+        }
+
+        .sure {
+            background-color: white;
+        }
+
+        .sure > .button {
+            display: inline;
+            /*padding-left: 15px;*/
+            /*padding-right: 15px;*/
+            border: 1px solid #ebebeb;
+
+        }
+        .cnt>.ye {
+            width: 30px;
+            height: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+
+
+
+        .sure > .one1 {
+            padding-left: 15px;
+            padding-right: 15px;
+
+        }
+
+        .sure > .one1:nth-child(3) {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        .shi {
+            display: inline;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+        .dangao{
+            display: inline;
+        }
+        .dangao{
+            width: 30px;
+            height: 18px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+
+        .queding {
+            border: 1px solid #ebebeb;
+            display: inline;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: orange;
+            color: white;
+
+        }
+        .weixin {
+            margin-top: 20px;
+            width: 1000px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        .weixin > img {
+            margin-right: 20px;
+            float: left;
+        }
+        .erweima{
+            float: left;
+        }
+
+        .one2 {
+
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 900;
+            color: #1fc3c1;
+        }
+        .footer {
+            width: 100%;
+            background-color: #515151;
+        }
+        .footbox{
+            width: 1000px;
+            margin-right: auto;
+            margin-left: auto;
+            overflow: hidden;
+
+        }
+        .footbox>.foot{
+            width: 380px;
+            color: white;
+            font-size: 16px;
+            float: left;
+            margin-top: 20px;
+
+        }
+        .banquan{
+            float: left;
+            margin-top: 70px;
+        }
+
+        li{
+
+            margin-left: 70px;
+            margin-right: 40px;
+            color: white;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        .tupian{
+            width: 10px;
+            height: 10px;
+        }
+        .end{
+            width: 1000px;
+            border-top: 1px solid white;
+            margin-right: auto;
+            margin-left: auto;
+            color: white;
+            font-size: 14px;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+        .jieshu1{
+            float: right;
+            padding-left: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="images/logo.png" alt="" class="logo"/>
+</div>
+<div class="title">
+    <div class="title_box">
+        <span class="title_shouye">首页</span>
+        <span class="title_shouye">咨询</span>
+        <span class="title_shouye">测评</span>
+        <span class="title_shouye">商城</span>
+
+        <div class="shenzhen">
+            <img src="images/location.png" alt="" class="location" align="center"/>
+            <a href="">深圳</a>
+            <a href="">切换</a>
+        </div>
+        <div class="title_box1">
+            <img src="images/adm.png" alt="" class="adm" align="center"/>
+            <a href="" class="">个人中心</a>
+
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="content_heading">
+        <span>首页></span>
+        <span>预防装修></span>
+        <span>材料库</span>
+    </div>
+    <div class="content_leibie">
+        <ul class="item row">
+            <li><a href="#">类别</a></li>
+            <li><a href="#">全部</a></li>
+            <li><a href="#">地板</a></li>
+            <li><a href="#">涂料</a></li>
+            <li><a href="#">墙纸</a></li>
+            <li><a href="#">瓷砖</a></li>
+            <li><a href="#">粘胶剂</a></li>
+            <li><a href="#">油漆</a></li>
+            <li><a href="#">家具</a></li>
+            <li><a href="#">板材</a></li>
+            <li><a href="#">饰品<img src="images/indexSelect.png" alt=""/></a></li>
+
+        </ul>
+        <ul class="item row">
+            <li><a href="#">类型</a></li>
+            <li><a href="#">全部</a></li>
+
+        </ul>
+        <ul class="item row">
+            <li><a href="#">材质</a></li>
+            <li><a href="#">全部</a></li>
+            <li><a href="#">实木</a></li>
+            <li><a href="#">复合</a></li>
+            <li><a href="#">强化</a></li>
+            <li><a href="#">其他</a></li>
+
+        </ul>
+        <ul class="item row">
+            <li><a href="#">品牌</a></li>
+            <li><a href="#">全部</a></li>
+            <li><a href="#">圣象</a></li>
+            <li><a href="#">大自然</a></li>
+            <li><a href="#">生活家</a></li>
+            <li><a href="#">北美风情</a></li>
+            <li><a href="#">德尔</a></li>
+            <li><a href="#">博典</a></li>
+            <li><a href="#">船王</a></li>
+
+
+        </ul>
+    </div>
+    <div class="search row">
+        <div class="time left">
+            发布时间
+            <img src="images/downicon.png" alt=""/>&nbsp;
+            价格
+            <img src="images/upicon.png" alt=""/>&nbsp;
+            环保节能
+            <img src="images/downicon.png" alt=""/>
+        </div>
+        <div class="sousou">
+            <input type="text"/>
+            <img src="images/search.png" align="center"/>
+            <button> 搜索</button>
+        </div>
+        <div class="wenhao right">
+            <img src="images/wenhao.png" alt="" align="center"/>
+            了解家居医生建材环保评级标准
+        </div>
+
+    </div>
+    <div class="cnt row">
+        <div class="cnt_box">
+            <img src="images/data_image.png" alt="" class="data"/>
+
+            <p class="jiage">德尔 都市系列</p>
+
+            <p class="jiage">木地板—复合地板</p>
+
+            <p class="jiage">单价：128元</p>
+            <h4>环保评级：B <span class="jieshi">（可以使用）</span></h4>
+        </div>
+        <div class="cnt_box">
+            <img src="images/data_image.png" alt="" class="data"/>
+
+            <p class="jiage">德尔 都市系列</p>
+
+            <p class="jiage">木地板—复合地板</p>
+
+            <p class="jiage">单价：128元</p>
+            <h4>环保评级：B <span class="jieshi">（可以使用）</span></h4>
+        </div>
+        <div class="cnt_box">
+            <img src="images/data_image.png" alt="" class="data"/>
+
+            <p class="jiage">德尔 都市系列</p>
+
+            <p class="jiage">木地板—复合地板</p>
+
+            <p class="jiage">单价：128元</p>
+            <h4>环保评级：B <span class="jieshi">（可以使用）</span></h4>
+        </div>
+        <div class="cnt_box">
+            <img src="images/data_image.png" alt="" class="data"/>
+
+            <p class="jiage">德尔 都市系列</p>
+
+            <p class="jiage">木地板—复合地板</p>
+
+            <p class="jiage">单价：128元</p>
+            <h4>环保评级：B <span class="jieshi">（可以使用）</span></h4>
+        </div>
+        <div class="cnt_box">
+            <img src="images/data_image.png" alt="" class="data"/>
+
+            <p class="jiage">德尔 都市系列</p>
+
+            <p class="jiage">木地板—复合地板</p>
+
+            <p class="jiage">单价：128元</p>
+            <h4>环保评级：B <span class="jieshi">（可以使用）</span></h4>
+        </div>
+        <div class="cnt_box">
+            <img src="images/data_image.png" alt="" class="data"/>
+
+            <p class="jiage">德尔 都市系列</p>
+
+            <p class="jiage">木地板—复合地板</p>
+
+            <p class="jiage">单价：128元</p>
+            <h4>环保评级：B <span class="jieshi">（可以使用）</span></h4>
+        </div>
+        <div class="cnt_box">
+            <img src="images/data_image.png" alt="" class="data"/>
+
+            <p class="jiage">德尔 都市系列</p>
+
+            <p class="jiage">木地板—复合地板</p>
+
+            <p class="jiage">单价：128元</p>
+            <h4>环保评级：B <span class="jieshi">（可以使用）</span></h4>
+        </div>
+        <div class="cnt_box">
+            <img src="images/data_image.png" alt="" class="data"/>
+
+            <p class="jiage">德尔 都市系列</p>
+
+            <p class="jiage">木地板—复合地板</p>
+
+            <p class="jiage">单价：128元</p>
+            <h4>环保评级：B <span class="jieshi">（可以使用）</span></h4>
+        </div>
+        <div class="sure">
+            <p class="button">上一页</p>
+            <span class="one1">1</span>
+            <span class="one1">2</span>
+            <span class="one1">3</span>
+            <span class="one1">4</span>
+            <span class="one1">5</span>
+
+            <p class="button">下一页</p>
+
+            <p class="shi">共有10页,去第
+                <span class="one1"><input type="text" class="dangao" />页</span>
+
+            <p class="queding">确定</p>
+            </p>
+
+        </div>
+    </div>
+</div>
+<div class="weixin">
+    <img src="images/small_weixin.png" alt=""/>
+    <div class="erweima">
+        <p class="one2">建材检测 需求反馈</p>
+
+        <p class="one3">亲爱的用户，我们正在不断的完善和更新建材库</p>
+
+        <p class="one3">若没有找到您想要的建材信息，请把你想要的建材告诉我们</p>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <div class="footbox">
+        <div class="foot">
+            <img src="images/footerLogo.png" alt="" class="footerlogo"/>
+
+            <p class="four1">为室内健康把好每一关</p>
+
+            <p class="five1">家居医生致力于中国人的家居健康问题，通过专业的技术研究和测评，倾力协助大众打造绿色，环保的人居生活环境。</p>
+        </div>
+
+        <ul class="banquan">
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>加入我们</li>
+        </ul>
+        <ul class="banquan">
+            <li>版权说明</li>
+            <li>用户隐私</li>
+            <li>免责声明</li>
+        </ul>
+        <ul class="banquan">
+            <li><img src="images/weixin2.png" alt="" class="tupian"/>官方微信</li>
+            <li><img src="images/tianmao.png" alt="" class="tupian"/>天猫旗舰店</li>
+            <li><img src="images/shop.png" alt="" class="tupian"/>有赞商城</li>
+        </ul>
+    </div>
+    <div class="end">
+        <span class="jieshu">深圳建筑科学研究院股份有限公司&nbsp;&nbsp;&nbsp;家居医生网</span>
+        <span class="jieshu1">粤ICP备08011321号 ©Copyright All Rights Reserved</span>
+
+    </div>
+</div>
+
+
+</body>
+</html>
